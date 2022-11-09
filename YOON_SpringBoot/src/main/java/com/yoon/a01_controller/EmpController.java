@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 import com.yoon.a02_service.EmpService;
 import com.yoon.a04_vo.Emp;
 
@@ -16,6 +17,11 @@ public class EmpController {
 	
 	@Autowired
 	private EmpService service;
+	
+	@RequestMapping(value="/ex")
+	public String ex() {
+		return "home";
+	}
 	
 	
 	@RequestMapping(value="/empList")
