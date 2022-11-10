@@ -20,8 +20,22 @@ public class EmpService {
 		return dao.getEmpList(sch);
 	}
 	
-	public String insertEmp(Emp ins) {
-		
-		return dao.insertEmp(ins);
+	
+	// 직원 상세 정보
+	public Emp getEmp(int empno) {
+		return dao.getEmp(empno);
 	}
+	
+	/**
+	public void insertEmp(Emp ins) {
+		dao.insertEmp(ins);
+	}
+	
+	public void uptEmp(Emp upt) {
+		dao.uptEmp(upt);
+	}	
+	public void delEmp(int empno) {
+		dao.delEmp(empno);
+	}
+	*/
 }

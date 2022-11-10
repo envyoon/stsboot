@@ -10,7 +10,11 @@
 <title>EMP LIST SAMPLE</title>
 
 <script>
-	
+
+function goDetail(empno){
+	// get방식으로 상세화면 이동..
+	location.href="${path}/empDetail?empno="+empno;	
+}
 
 </script>
 

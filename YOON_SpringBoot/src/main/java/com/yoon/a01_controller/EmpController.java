@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.yoon.a02_service.EmpService;
 import com.yoon.a04_vo.Emp;
@@ -32,7 +32,7 @@ public class EmpController {
 		return "emp/empList";
 	}
 	
-	
+	/**
 	// 리스트 추가하기.
 	@RequestMapping(value="/insertEmp")
 	public String insertEmp(Emp ins, Model d){
@@ -42,14 +42,16 @@ public class EmpController {
 		return "emp/empInsert"; 
 	}
 	
-	/**
+	*/
 	// emp.do?empno=7780
-	@RequestMapping("/emp.do")
+	@RequestMapping(value="/empDetail")
 	public String getEmpno(@RequestParam("empno") int empno, Model d){
 		System.out.println("상세 empno:"+empno);
 		d.addAttribute("emp", service.getEmp(empno));
-		return "WEB-INF\\views\\a02_mvc\\a02_empDetail.jsp";
-	}	
+		return "emp/empDetail";
+	}
+	
+	/**
 	// uptEmp.do?empno=7080&ename=홍길동&job=대리
 	@RequestMapping("/uptEmp.do")
 	public String uptEmp(Emp upt, Model d){
