@@ -23,24 +23,26 @@ public class EmpController {
 		return "home";
 	}
 	
-	
+	// 리스트 출력
 	@RequestMapping(value="/empList")
 	public String empList(Emp sch, Model d) {
 		
 		d.addAttribute("emplist", service.getEmpList(sch));
 		
-		return "empList";
+		return "emp/empList";
 	}
 	
-	/**
-	@RequestMapping("/insertEmp.do")
+	
+	// 리스트 추가하기.
+	@RequestMapping(value="/insertEmp")
 	public String insertEmp(Emp ins, Model d){
 		
 		d.addAttribute("proc","등록완료");
-		System.out.println("날짜:"+ins.getHiredateS());
 		service.insertEmp(ins);
-		return "WEB-INF\\views\\a02_mvc\\a01_empList.jsp"; // 등록 후, 처리해야 할 화면 호출..
-	}	
+		return "emp/empInsert"; 
+	}
+	
+	/**
 	// emp.do?empno=7780
 	@RequestMapping("/emp.do")
 	public String getEmpno(@RequestParam("empno") int empno, Model d){

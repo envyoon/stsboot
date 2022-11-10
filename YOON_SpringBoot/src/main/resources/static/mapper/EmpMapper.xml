@@ -10,5 +10,9 @@
 		from emp
 	</select>
 
+	<insert id="insertEmp" parameterType="Emp">
+		INSERT INTO STSBOOT.EMP (EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
+		VALUES(#{empno}, #{ename}, #{job}, #{mgr}, #{hiredate}, #{sal}, #{comm}, #{deptno})
+	</insert>
 
 </mapper>

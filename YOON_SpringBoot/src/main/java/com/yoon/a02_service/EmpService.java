@@ -19,4 +19,9 @@ public class EmpService {
 		
 		return dao.getEmpList(sch);
 	}
+	
+	public String insertEmp(Emp ins) {
+		
+		return dao.insertEmp(ins);
+	}
 }

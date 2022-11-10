@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    import="java.util.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
@@ -7,6 +8,13 @@
 <head>
 <meta charset="UTF-8">
 <title>EMP LIST SAMPLE</title>
+
+<script>
+	
+
+</script>
+
+
 </head>
 <body>
 
@@ -14,6 +22,7 @@
   <h2>사원정보조회</h2>
 
 </div>
+
 <div class="container">
 
    <table class="table table-hover table-striped">
@@ -43,6 +52,10 @@
     	</c:forEach>
     </tbody>
 	</table>    
+    
+    <form action="">
+    	<input type='button' value='등록하기'/>
+    </form>
     
 </div>
 
