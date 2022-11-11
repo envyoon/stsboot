@@ -1,13 +1,20 @@
 package com.yoon.a01_controller;
 
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.yoon.YoonSpringBootApplication;
 import com.yoon.a02_service.EmpService;
 import com.yoon.a04_vo.Emp;
+
+
 
 
 
@@ -17,6 +24,8 @@ public class EmpController {
 	
 	@Autowired
 	private EmpService service;
+	
+	private static Logger logger = LogManager.getLogger(YoonSpringBootApplication.class);
 	
 	@RequestMapping(value="/ex")
 	public String ex() {
@@ -28,6 +37,7 @@ public class EmpController {
 	public String empList(Emp sch, Model d) {
 		
 		d.addAttribute("emplist", service.getEmpList(sch));
+		
 		
 		return "emp/empList";
 	}
