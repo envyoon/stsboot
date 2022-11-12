@@ -26,14 +26,17 @@ public class EmpService {
 		return dao.getEmp(empno);
 	}
 	
-	/**
+	
 	public void insertEmp(Emp ins) {
 		dao.insertEmp(ins);
 	}
 	
+	
 	public void uptEmp(Emp upt) {
 		dao.uptEmp(upt);
 	}	
+	
+	/**
 	public void delEmp(int empno) {
 		dao.delEmp(empno);
 	}

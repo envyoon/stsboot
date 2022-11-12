@@ -9,11 +9,21 @@
 <meta charset="UTF-8">
 <title>EMP LIST SAMPLE</title>
 
+<!-- 제이쿼리 CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 <script>
 
 function goDetail(empno){
 	// get방식으로 상세화면 이동..
 	location.href="${path}/empDetail?empno="+empno;	
+}
+
+function insert(){
+	
+	location.href="${path}/empInsert";	
 }
 
 </script>
@@ -57,9 +67,9 @@ function goDetail(empno){
     </tbody>
 	</table>    
     
-    <form action="">
-    	<input type='button' value='등록하기'/>
-    </form>
+    <div class="modal-footer">
+	        <button type="button" id="insert" onclick="insert()">등록하기</button>
+	</div>
     
 </div>
 
