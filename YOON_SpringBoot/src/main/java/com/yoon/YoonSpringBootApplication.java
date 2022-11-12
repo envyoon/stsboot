@@ -16,7 +16,6 @@ public class YoonSpringBootApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(YoonSpringBootApplication.class, args);
 		
-	
 		//logger.info("Staring Spring Boot application..");
 		//SpringApplication app = new SpringApplication(YoonSpringBootApplication.class);
 		//app.run(args);
