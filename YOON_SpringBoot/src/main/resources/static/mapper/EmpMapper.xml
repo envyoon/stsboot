@@ -23,14 +23,14 @@
 	
 	<update id = "uptEmp" parameterType="Emp">
 		update emp
-		   set ename = #{ename},
-			   job = #{job},
-			   mgr = #{mgr},
-			   hiredate = #{hiredate},
-			   sal = #{sal},
-			   comm = #{comm},
-			   deptno = #{deptno}
-		 where empno = #{empno}	
+		   set ename = #{ename, jdbcType=VARCHAR},
+			   job = #{job, jdbcType=VARCHAR},
+			   mgr = #{mgr, jdbcType=VARCHAR},
+			   hiredate = #{hiredate, jdbcType=VARCHAR},
+			   sal = #{sal, jdbcType=VARCHAR},
+			   comm = #{comm, jdbcType=VARCHAR},
+			   deptno = #{deptno, jdbcType=VARCHAR}
+		 where empno = #{empno, jdbcType=VARCHAR}	
 	</update>
 	
 </mapper>
