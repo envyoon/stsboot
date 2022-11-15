@@ -23,7 +23,9 @@
 	
 	<update id = "uptEmp" parameterType="Emp">
 		update emp
-		   set ename = #{ename, jdbcType=VARCHAR},
+		   set 
+		   	   empno = #{empno, jdbcType=VARCHAR},
+		   	   ename = #{ename, jdbcType=VARCHAR},
 			   job = #{job, jdbcType=VARCHAR},
 			   mgr = #{mgr, jdbcType=VARCHAR},
 			   hiredate = #{hiredate, jdbcType=VARCHAR},
