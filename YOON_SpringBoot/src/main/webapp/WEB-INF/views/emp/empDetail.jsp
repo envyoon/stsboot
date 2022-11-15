@@ -71,7 +71,7 @@
 	        <th>MGR</th> <td><input type="text" id="mgr" value=${emp.mgr}></td>
 	      </tr>
 	      <tr class="table-success text-center">
-	        <th>입사날짜</th> <td><fmt:formatDate value="${emp.hiredate}"/></td>
+	        <th>입사날짜</th> <td><fmt:formatDate var="hiredate" value="${emp.hiredate}"/></td>
 	      </tr>
 	      <tr class="table-success text-center">
 	        <th>급여</th> <td><input type="text" id="sal" value=${emp.sal}></td>

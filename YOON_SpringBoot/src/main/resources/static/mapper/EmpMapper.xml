@@ -22,7 +22,7 @@
 	</select>
 	
 	<update id = "uptEmp" parameterType="Emp">
-		update emp
+		update stsboot.emp
 		   set 
 		   	   empno = #{empno, jdbcType=VARCHAR},
 		   	   ename = #{ename, jdbcType=VARCHAR},
