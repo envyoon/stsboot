@@ -24,7 +24,7 @@
 	<update id = "uptEmp" parameterType="Emp">
 		update stsboot.emp
 		   set 
-		   	   empno = #{empno, jdbcType=VARCHAR},
+		   	   empno = #{empno, jdbcType=INTEGER},
 		   	   ename = #{ename, jdbcType=VARCHAR},
 			   job = #{job, jdbcType=VARCHAR},
 			   mgr = #{mgr, jdbcType=VARCHAR},

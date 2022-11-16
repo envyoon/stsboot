@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.yoon.a02_service.EmpService;
 import com.yoon.a04_vo.Emp;
 
+import ch.qos.logback.classic.Logger;
+
 
 
 
@@ -64,6 +66,7 @@ public class EmpController {
 	public String uptEmp(Emp upt, Model d){
 		d.addAttribute("proc","수정완료");
 		service.uptEmp(upt);
+		 
 		// 수정된 내용을 기준으로 상세화면에 다시 확인하여야 하기에 아래와 같은 형식으로
 		// forward 처리한다. : 위에 선언된 controller로 호출..
 		return "emp/empDetail";
