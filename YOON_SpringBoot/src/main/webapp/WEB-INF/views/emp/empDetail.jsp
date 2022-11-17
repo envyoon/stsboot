@@ -15,12 +15,8 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 <script>
-	<!--
-	function goBack(){
-		// get방식으로 상세화면 이동..
-		location.href="${path}/empList";	
-	}
-	-->
+	
+	
 	$(document).ready(function(){
 		
 		$("#goBack").click(function(){
@@ -32,6 +28,7 @@
 			if(confirm("수정하시겠습니까?")){
 				$("form").attr("action","${path}/uptEmp");
 				$("form").submit();
+				console.log("동작함")
 			}
 		}); 
 		
@@ -59,28 +56,28 @@
 	   	
 	    <thead>
 	      <tr class="table-success text-center">
-	        <th>사원번호</th> <td><input type="text" id="empno" value=${emp.empno}></td>
+	        <th>사원번호</th> <td><input type="text" name="empno" value=${emp.empno}></td>
 	      </tr>
 	      <tr class="table-success text-center">
-	        <th>사원명</th> <td><input type="text" id="ename" value=${emp.ename}></td>
+	        <th>사원명</th> <td><input type="text" name="ename" value=${emp.ename}></td>
 	      </tr>
 		  <tr class="table-success text-center">
-	        <th>직책명</th> <td><input type="text" id="job" value=${emp.job}></td>
+	        <th>직책명</th> <td><input type="text" name="job" value=${emp.job}></td>
 	      </tr>
 	      <tr class="table-success text-center">
-	        <th>MGR</th> <td><input type="text" id="mgr" value=${emp.mgr}></td>
+	        <th>MGR</th> <td><input type="text" name="mgr" value=${emp.mgr}></td>
 	      </tr>
 	      <tr class="table-success text-center">
 	        <th>입사날짜</th> <td><fmt:formatDate var="hiredate" value="${emp.hiredate}"/></td>
 	      </tr>
 	      <tr class="table-success text-center">
-	        <th>급여</th> <td><input type="text" id="sal" value=${emp.sal}></td>
+	        <th>급여</th> <td><input type="text" name="sal" value=${emp.sal}></td>
 	      </tr>
 	      <tr class="table-success text-center">
-	        <th>COMM</th> <td><input type="text" id="comm" value=${emp.comm}></td>
+	        <th>COMM</th> <td><input type="text" name="comm" value=${emp.comm}></td>
 	      </tr>
 	      <tr class="table-success text-center">
-	        <th>부서번호</th> <td><input type="text" id="deptno" value=${emp.deptno}></td>
+	        <th>부서번호</th> <td><input type="text" name="deptno" value=${emp.deptno}></td>
 	      </tr>
 	    </thead>	
 		</table>    
