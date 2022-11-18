@@ -11,8 +11,17 @@
 	</select>
 
 	<insert id="insertEmp" parameterType="Emp">
-		INSERT INTO STSBOOT.EMP (EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
-		VALUES(#{empno}, #{ename}, #{job}, #{mgr}, #{hiredate}, #{sal}, #{comm}, #{deptno})
+		INSERT INTO STSBOOT.EMP (ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
+		VALUES(
+		#{empno, jdbcType=VARCHAR},
+		#{ename, jdbcType=VARCHAR},
+		#{job, jdbcType=VARCHAR},
+		#{mgr, jdbcType=VARCHAR},
+		#{hiredate, jdbcType=VARCHAR},
+		#{sal, jdbcType=VARCHAR},
+		#{comm, jdbcType=VARCHAR},
+		#{deptno, jdbcType=VARCHAR}
+		)
 	</insert>
 
 	<select id="getEmp" resultType="Emp">
@@ -24,7 +33,6 @@
 	<update id = "uptEmp" parameterType="Emp">
 		update stsboot.emp
 		   set 
-		   	   empno = #{empno, jdbcType=INTEGER},
 		   	   ename = #{ename, jdbcType=VARCHAR},
 			   job = #{job, jdbcType=VARCHAR},
 			   mgr = #{mgr, jdbcType=VARCHAR},

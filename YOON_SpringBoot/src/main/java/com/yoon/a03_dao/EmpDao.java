@@ -24,6 +24,10 @@ public interface EmpDao {
 	
 	public void uptEmp(Emp upt);
 	
+	
+	// 인서트 페이지
+	public String insertEmpPage(Emp ip);
+	
 	/**
 	public void delEmp(int empno);
 	*/

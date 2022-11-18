@@ -68,7 +68,7 @@ function insert(){
 	</table>    
     
     <div class="modal-footer">
-	        <button type="button" id="insert" onclick="insert()">등록하기</button>
+	        <button type="button" name="insert" id="insert" onclick="insert()">등록하기</button>
 	</div>
     
 </div>

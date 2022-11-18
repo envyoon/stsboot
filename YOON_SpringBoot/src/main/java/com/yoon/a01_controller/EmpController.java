@@ -42,7 +42,15 @@ public class EmpController {
 	}
 	
 	
-	// 리스트 추가하기.
+	// 추가 페이지
+	@RequestMapping(value="/empInsertPage")
+	public String insertEmpPage(Emp ip, Model d) {
+		d.addAttribute("insertForm", service.insertEmpPage(ip));
+		
+		return "emp/empInsert";
+	}
+	
+	
 	@RequestMapping(value="/empInsert")
 	public String insertEmp(Emp ins, Model d){
 		
