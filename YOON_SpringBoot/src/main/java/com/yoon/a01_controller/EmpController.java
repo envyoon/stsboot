@@ -44,8 +44,8 @@ public class EmpController {
 	
 	// 추가 페이지
 	@RequestMapping(value="/empInsertPage")
-	public String insertEmpPage(Emp ip, Model d) {
-		d.addAttribute("insertForm", service.insertEmpPage(ip));
+	public String insertEmpPage() {
+		
 		
 		return "emp/empInsert";
 	}

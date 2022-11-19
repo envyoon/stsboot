@@ -27,10 +27,7 @@ public class EmpService {
 	}
 	
 	
-	// 인서트 페이지
-	public String insertEmpPage(Emp ip) {
-		dao.insertEmpPage(ip);
-	}
+	
 	
 	public void insertEmp(Emp ins) {
 		dao.insertEmp(ins);

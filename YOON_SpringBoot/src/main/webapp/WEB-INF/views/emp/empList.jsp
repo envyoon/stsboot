@@ -23,7 +23,7 @@ function goDetail(empno){
 
 function insert(){
 	
-	location.href="${path}/empInsert";	
+	location.href="${path}/empInsertPage";	
 }
 
 </script>
