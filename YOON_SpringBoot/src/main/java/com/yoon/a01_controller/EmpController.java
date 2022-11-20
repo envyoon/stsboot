@@ -44,8 +44,7 @@ public class EmpController {
 	
 	// 추가 페이지
 	@RequestMapping(value="/empInsertPage")
-	public String insertEmpPage() {
-		
+	public String insertPage() {
 		
 		return "emp/empInsert";
 	}

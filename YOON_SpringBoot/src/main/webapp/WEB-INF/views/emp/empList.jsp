@@ -21,7 +21,7 @@ function goDetail(empno){
 	location.href="${path}/empDetail?empno="+empno;	
 }
 
-function insert(){
+function insertPage(){
 	
 	location.href="${path}/empInsertPage";	
 }
@@ -31,6 +31,7 @@ function insert(){
 
 </head>
 <body>
+
 
 <div class="jumbotron text-center">
   <h2>사원정보조회</h2>
@@ -68,7 +69,7 @@ function insert(){
 	</table>    
     
     <div class="modal-footer">
-	        <button type="button" name="insert" id="insert" onclick="insert()">등록하기</button>
+	        <button type="button"  onclick="insertPage()">등록하기</button>
 	</div>
     
 </div>
