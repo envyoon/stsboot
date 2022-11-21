@@ -1,12 +1,15 @@
 package com.yoon.a04_vo;
 
-import java.util.Date;
+import java.sql.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class Emp {
 	private int empno;
 	private String ename;
 	private String job;
 	private int mgr;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date hiredate;
 	private String hiredateS;
 	private double sal;

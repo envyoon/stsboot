@@ -11,13 +11,13 @@
 	</select>
 
 	<insert id="insertEmp" parameterType="Emp">
-		INSERT INTO STSBOOT.EMP (ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
+		INSERT INTO STSBOOT.EMP (EMPNO ,ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
 		VALUES(
 		#{empno, jdbcType=VARCHAR},
 		#{ename, jdbcType=VARCHAR},
 		#{job, jdbcType=VARCHAR},
 		#{mgr, jdbcType=VARCHAR},
-		#{hiredate, jdbcType=VARCHAR},
+		#{hiredateS, jdbcType=VARCHAR},
 		#{sal, jdbcType=VARCHAR},
 		#{comm, jdbcType=VARCHAR},
 		#{deptno, jdbcType=VARCHAR}

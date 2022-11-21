@@ -59,7 +59,7 @@
 		     <!-- HIREDATE, SAL -->
 		     <div class="row">
 		      	<div class="col">
-		       		 <div>입사날짜</div> <input type="text" class="form-control" placeholder="HIREDATE" name="hiredate">
+		       		 <div>입사날짜</div> <input type="date" class="form-control" placeholder="HIREDATE" name="hiredateS">
 		      	</div>
 		      	<div class="col">
 		        	<div>SAL</div> <input type="text" class="form-control" placeholder="SAL" name="sal">
