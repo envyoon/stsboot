@@ -17,6 +17,10 @@
 	
 	$(document).ready(function(){
 	
+		$("#goBack").click(function(){
+			location.href="${path}/empList";
+		});
+		
 		$("#insbtn").click(function(){
 			if(confirm("등록하시겠습니까?")){
 				$("#insfrom").submit(); 
@@ -80,6 +84,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" id="insbtn" class="btn btn-primary">등록</button>
+	        <button type="button" id="goBack" class="btn btn-primary">뒤로가기</button>
 	      </div>
 	    
 </body>
