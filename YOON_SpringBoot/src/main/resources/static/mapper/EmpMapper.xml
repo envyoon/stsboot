@@ -13,14 +13,14 @@
 	<insert id="insertEmp" parameterType="Emp">
 		INSERT INTO STSBOOT.EMP (EMPNO ,ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
 		VALUES(
-		#{empno, jdbcType=VARCHAR},
-		#{ename, jdbcType=VARCHAR},
-		#{job, jdbcType=VARCHAR},
-		#{mgr, jdbcType=VARCHAR},
-		#{hiredateS, jdbcType=VARCHAR},
-		#{sal, jdbcType=VARCHAR},
-		#{comm, jdbcType=VARCHAR},
-		#{deptno, jdbcType=VARCHAR}
+		#{empno},
+		#{ename},
+		#{job},
+		#{mgr},
+		#{hiredateS},
+		#{sal},
+		#{comm},
+		#{deptno}
 		)
 	</insert>
 
@@ -33,14 +33,18 @@
 	<update id = "uptEmp" parameterType="Emp">
 		update stsboot.emp
 		   set 
-		   	   ename = #{ename, jdbcType=VARCHAR},
-			   job = #{job, jdbcType=VARCHAR},
-			   mgr = #{mgr, jdbcType=VARCHAR},
-			   hiredate = #{hiredate, jdbcType=VARCHAR},
-			   sal = #{sal, jdbcType=VARCHAR},
-			   comm = #{comm, jdbcType=VARCHAR},
-			   deptno = #{deptno, jdbcType=VARCHAR}
-		 where empno = #{empno, jdbcType=VARCHAR}	
+		   	   ename = #{ename},
+			   job = #{job},
+			   mgr = #{mgr},
+			   hiredate = #{hiredate},
+			   sal = #{sal},
+			   comm = #{comm},
+			   deptno = #{deptno}
+		 where empno = #{empno}	
 	</update>
+	
+	<delete id="delEmp" parameterType="int">
+		delete from emp where empno=#{empno}
+	</delete>
 	
 </mapper>
