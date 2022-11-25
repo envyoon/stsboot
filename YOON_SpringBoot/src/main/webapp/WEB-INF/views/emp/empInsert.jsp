@@ -24,6 +24,7 @@
 		$("#insbtn").click(function(){
 			if(confirm("등록하시겠습니까?")){
 				$("#insfrom").submit(); 
+				alert('등록완료');
 			}
 		});
 		
