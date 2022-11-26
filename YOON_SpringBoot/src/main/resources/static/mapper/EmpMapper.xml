@@ -36,7 +36,7 @@
 		   	   ename = #{ename},
 			   job = #{job},
 			   mgr = #{mgr},
-			   hiredate = #{hiredate},
+			   hiredate = to_date(#{hiredateS},'YYYY-MM-DD'),
 			   sal = #{sal},
 			   comm = #{comm},
 			   deptno = #{deptno}
