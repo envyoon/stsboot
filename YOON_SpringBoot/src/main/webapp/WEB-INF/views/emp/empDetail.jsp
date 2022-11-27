@@ -55,7 +55,7 @@
 	   	
 	    <thead>
 	      <tr class="table-success text-center">
-	        <th>사원번호</th> <td>${emp.empno}</td>
+	        <th>사원번호</th> <td><input type="hidden" name="empno" value=${emp.empno}></td>
 	      </tr>
 	      <tr class="table-success text-center">
 	        <th>사원명</th> <td><input type="text" name="ename" value=${emp.ename}></td>

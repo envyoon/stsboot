@@ -33,6 +33,7 @@
 	<update id = "uptEmp" parameterType="Emp">
 		update stsboot.emp
 		   set 
+		   	   empno = #{empno},
 		   	   ename = #{ename},
 			   job = #{job},
 			   mgr = #{mgr},
