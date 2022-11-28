@@ -18,6 +18,16 @@
 	
 	
 	$(document).ready(function(){
+		var proc="${proc}";
+		if(proc!=""){
+			alert(proc);
+			if(proc=="삭제되었습니다"){
+				location.href="${path}/empList";
+			}
+			if(proc=="수정완료"){
+				location.href="${path}/empList";
+			}
+		}
 		
 		$("#goBack").click(function(){
 			location.href="${path}/empList";
@@ -31,7 +41,11 @@
 			}
 		}); 
 		
-		
+		$("#delBtn").click(function(){
+			if(confirm("삭제하시겠습니까?")){
+				location.href="${path}/delEmp.do?empno="+$("[name=empno]").val();
+			}
+		});
 				
 		
 		
@@ -52,10 +66,10 @@
 
 	<form method="post">
 	   <table class="table table-hover table-striped">
-	   	
+	   
 	    <thead>
 	      <tr class="table-success text-center">
-	        <th>사원번호</th> <td><input type="hidden" name="empno" value=${emp.empno}></td>
+	        <th></th> <td><input type="hidden" name="empno" value=${emp.empno}></td>
 	      </tr>
 	      <tr class="table-success text-center">
 	        <th>사원명</th> <td><input type="text" name="ename" value=${emp.ename}></td>
@@ -91,6 +105,7 @@
 	    <div style="text-align:left;">
 			<input type="button" class="btn btn-info" value="뒤로가기" id="goBack"/>
 			<input type="button" class="btn btn-info" value="수정하기" id="uptBtn"/>		
+			<input type="button" class="btn btn-info" value="삭제하기" id="delBtn"/>		
 		</div>
 		
 	</form>

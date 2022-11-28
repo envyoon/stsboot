@@ -26,8 +26,6 @@ public interface EmpDao {
 	
 	
 	
-	
-	/**
 	public void delEmp(int empno);
-	*/
+	
 }

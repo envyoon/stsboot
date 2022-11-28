@@ -83,12 +83,12 @@ public class EmpController {
 		return "emp/empDetail";
 	}
 	
-	/**
+	
 	@RequestMapping("/delEmp.do")
 	public String delEmp(@RequestParam("empno") int empno, Model d){
 		d.addAttribute("proc","삭제되었습니다");
 		service.delEmp(empno);
-		return "WEB-INF\\views\\a02_mvc\\a02_empDetail.jsp";
+		return "emp/empDetail";
 	}
-	*/
+	
 }

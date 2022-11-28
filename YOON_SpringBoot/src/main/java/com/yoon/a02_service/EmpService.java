@@ -38,9 +38,9 @@ public class EmpService {
 		dao.uptEmp(upt);
 	}	
 	
-	/**
+	
 	public void delEmp(int empno) {
 		dao.delEmp(empno);
 	}
-	*/
+	
 }
