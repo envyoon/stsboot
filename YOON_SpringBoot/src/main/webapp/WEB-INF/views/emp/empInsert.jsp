@@ -16,7 +16,13 @@
 <script type="text/javascript">
 	
 	$(document).ready(function(){
-	
+		var proc="${proc}";
+		if(proc!=""){
+			alert(proc);
+			if(proc=="등록완료"){
+				location.href="${path}/empList";
+			}
+		}			
 		$("#goBack").click(function(){
 			location.href="${path}/empList";
 		});
@@ -24,12 +30,12 @@
 		$("#insbtn").click(function(){
 			if(confirm("등록하시겠습니까?")){
 				$("#insfrom").submit(); 
-				alert('등록완료');
 			}
 		});
 		
 	});
 	
+		
 </script>
 
 </head>

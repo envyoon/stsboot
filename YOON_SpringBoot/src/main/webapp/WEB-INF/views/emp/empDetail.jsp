@@ -47,7 +47,9 @@
 			}
 		});
 				
-		
+		$("#goBack").click(function(){
+			location.href="${path}/empList";
+		});
 		
 	});
 	
