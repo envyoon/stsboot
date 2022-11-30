@@ -13,14 +13,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.yoon.a02_service.EmpService;
 import com.yoon.a04_vo.Emp;
 
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 
 
 
 
 
 
-
-
+@Slf4j
 @Controller
 @RequestMapping("/")
 public class EmpController {
@@ -41,6 +42,8 @@ public class EmpController {
 		
 		d.addAttribute("emplist", service.getEmpList(sch));
 		
+		
+
 		
 		return "emp/empList";
 	}
