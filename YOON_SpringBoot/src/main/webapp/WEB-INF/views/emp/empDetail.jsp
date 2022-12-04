@@ -14,6 +14,13 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
+<link rel="stylesheet" href="resources/a00_com/bootstrap.min.css" >
+<link rel="stylesheet" href="resources/a00_com/jquery-ui.css" >
+<style type="text/css">
+	.input-group-text{width:100%;background-color:linen;color:black;font-weight:bolder;}
+	.input-group-prepend{width:20%;}
+</style>
+
 <script>
 	
 	
@@ -97,13 +104,7 @@
 	    </thead>	
 		</table>    
 	    
-	    <!-- 
-	    <div class="modal-footer">
-		        <button type="button" id="goBack" onclick="goBack()">뒤로가기</button>
-		        <button type="button" id="uptBtn" onclick="uptBtn()">수정하기</button>
-		</div>
-		 -->
-		 
+	 
 	    <div style="text-align:left;">
 			<input type="button" class="btn btn-info" value="뒤로가기" id="goBack"/>
 			<input type="button" class="btn btn-info" value="수정하기" id="uptBtn"/>		
