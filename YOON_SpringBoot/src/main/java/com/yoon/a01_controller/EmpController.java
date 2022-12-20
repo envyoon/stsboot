@@ -42,9 +42,7 @@ public class EmpController {
 		
 		d.addAttribute("emplist", service.getEmpList(sch));
 		
-		
 
-		
 		return "emp/empList";
 	}
 	
