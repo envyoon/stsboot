@@ -75,11 +75,8 @@
 
 	<form method="post">
 	   <table class="table table-hover table-striped">
-	   
+	   	<input type="hidden" name="empno" value=${emp.empno}>
 	    <thead>
-	      <tr class="table-success text-center">
-	        <th></th> <td><input type="hidden" name="empno" value=${emp.empno}></td>
-	      </tr>
 	      <tr class="table-success text-center">
 	        <th>사원명</th> <td><input type="text" name="ename" value=${emp.ename}></td>
 	      </tr>

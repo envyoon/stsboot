@@ -27,8 +27,6 @@ public class EmpService {
 	}
 	
 	
-	
-	
 	public void insertEmp(Emp ins) {
 		dao.insertEmp(ins);
 	}
