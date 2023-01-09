@@ -72,10 +72,12 @@
 </div>
 
 <div class="container">
-
+	<!-- 지정 데이터를 보내기 위한 히든 처리 -->
+	<input type="hidden" name="empno" value=${emp.empno}>
+	
 	<form method="post">
 	   <table class="table table-hover table-striped">
-	   	<input type="hidden" name="empno" value=${emp.empno}>
+	   	
 	    <thead>
 	      <tr class="table-success text-center">
 	        <th>사원명</th> <td><input type="text" name="ename" value=${emp.ename}></td>
