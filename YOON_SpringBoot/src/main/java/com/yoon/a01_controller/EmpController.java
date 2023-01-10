@@ -85,7 +85,7 @@ public class EmpController {
 	}
 	
 	
-	@RequestMapping("/delEmp.do")
+	@RequestMapping("/delEmp")
 	public String delEmp(@RequestParam("empno") int empno, Model d){
 		d.addAttribute("proc","삭제되었습니다");
 		service.delEmp(empno);
