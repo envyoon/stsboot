@@ -14,6 +14,9 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
+<!-- Vue CDN -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 <link rel="stylesheet" href="resources/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="resources/a00_com/jquery-ui.css" >
 <style type="text/css">
