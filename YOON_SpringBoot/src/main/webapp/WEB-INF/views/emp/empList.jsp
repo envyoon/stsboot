@@ -26,7 +26,7 @@
 
 <script>
 
-function goDetail(empno){
+/* function goDetail(empno){
 	// get방식으로 상세화면 이동..
 	location.href="${path}/empDetail?empno="+empno;	
 }
@@ -34,7 +34,7 @@ function goDetail(empno){
 function insertPage(){
 	
 	location.href="${path}/empInsertPage";	
-}
+} */
 
 </script>
 
@@ -44,7 +44,7 @@ function insertPage(){
 
 
 <div class="jumbotron text-center">
-  <h2>사원정보조회</h2>
+  <h2>{{title}}</h2>
 
 </div>
 
@@ -66,15 +66,13 @@ function insertPage(){
       </tr>
     </thead>	
     <tbody>
-    	<c:forEach var="emp" items="${emplist}">
-	    	<tr ondblclick="goDetail(${emp.empno})">
-	    		<td>${emp.empno}</td>
-	    		<td>${emp.ename}</td>
-	    		<td>${emp.job}</td>
-	    		<td><fmt:formatNumber value="${emp.sal}"/></td>
-	    		<td>${emp.deptno}</td>
-	    	</tr>
-    	</c:forEach>
+    	<tr v-for="(emp, idx) in empList">
+    		<td>{{emp.empno}}</td>
+    		<td>{{emp.ename}}</td>
+    		<td>{{emp.job}}</td>
+    		<td>{{emp.sal}}</td>
+    		<td>{{emp.deptno}}</td>
+    	</tr>
     </tbody>
 	</table>    
     
@@ -86,4 +84,32 @@ function insertPage(){
 
     
 </body>
+<script>
+	var vm = new Vue({
+		el:".container",
+		data:{title:"EMP LIST SAMPLE"},empList:[],isProcess:false,emp:{},empno:0},
+		methods:{
+			detail:function(){
+				var vm = this;
+				$.ajax({
+					url:"${path}/empDetail"
+					data:"empno="+vm.empno,
+					dataType:"json",
+					success:function(data){
+						vm.emp = data.emp;
+						var date = new Date(data.emp.hiredate);
+						console.log(date.toLocaleString());
+						vm.emp.hiredate = date.toLocaleString();
+						console.log(vm.emp.hiredate);
+					},
+					error:function(err){
+						console.log(err);
+					}
+				})
+			},
+		}
+	})
+</script>
+
+
 </html>
