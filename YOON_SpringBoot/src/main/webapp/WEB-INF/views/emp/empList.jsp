@@ -17,6 +17,9 @@
 <!-- Vue CDN -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+<!-- axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <link rel="stylesheet" href="resources/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="resources/a00_com/jquery-ui.css" >
 <style type="text/css">
