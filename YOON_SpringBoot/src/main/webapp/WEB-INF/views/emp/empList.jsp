@@ -109,7 +109,7 @@ function insertPage(){
 						console.log(err);
 					}
 				})
-			},
+			}
 		}
 	})
 </script>
